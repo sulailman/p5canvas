@@ -5,6 +5,7 @@ function setup() {
   background(50);
 }
 function draw() {
+
   push();
   // move the origin to the center of the canvas
   translate(width / 2, height / 2);
@@ -12,13 +13,21 @@ function draw() {
   rotate(radians(theta / 12));
   rect(-15, -85, 30, 100);
   pop();
+
   push();
   // move the origin back to the center of the canvas
   translate(width / 2, height / 2);
   // move the minute hand
   rotate(radians(theta));
-  rect(-10, -190, 20, 200);
+  rect(-10, -190, 15, 200);
+  pop();
+	 push();
+  // move the origin back to the center of the canvas
+  translate(width / 2, height / 2);
+  // move the minute hand
+  rotate(radians(theta));
+  rect(-10, -190, 20, 2200);
   pop();
   // increment the angle by one degree
-  theta += 1;
+  theta += 1 / 600;
 }
